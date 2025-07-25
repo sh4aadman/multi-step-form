@@ -1,0 +1,7 @@
+:root {
+  --primary-color: hsl(213, 96%, 18%);
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
