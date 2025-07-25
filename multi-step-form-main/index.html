@@ -54,7 +54,7 @@
           type="tel" name="phone-number" id="phone-number" placeholder="e.g. +1 234 567 890"><br>
       </form>
       <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse">
-        <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2" type="submit">Next Step</button>
+        <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2 next-step" type="submit">Next Step</button>
       </section>
     </section>
     <section id="2" class="hidden">
@@ -63,10 +63,10 @@
         <p>You have the option of monthly or yearly billing.</p>
         <input type="radio" name="plan" id="arcade" value="Arcade">
         <label for="arcade">Arcade</label><br>
-        <input type="radio" name="plan" id="arcade" value="Arcade">
-        <label for="arcade">Arcade</label><br>
-        <input type="radio" name="plan" id="arcade" value="Arcade">
-        <label for="arcade">Arcade</label><br>
+        <input type="radio" name="plan" id="advanced" value="Advanced">
+        <label for="arcade">Advanced</label><br>
+        <input type="radio" name="plan" id="pro" value="Pro">
+        <label for="arcade">Pro</label><br>
         <input type="checkbox" name="plan" id="plan">
         <label for="plan">Monthly / Yearly</label><br>
         <button>Go Back</button>
@@ -101,6 +101,7 @@
         please feel free to email us at support@loremgaming.com.</p>
     </section>
   </main>
+  <script type="module" src="./scripts/steps.js"></script>
 </body>
 
 </html>
