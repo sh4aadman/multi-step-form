@@ -27,27 +27,35 @@
 
   <header>
     <nav>
-      <ol>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
+      <ol class="list-none flex gap-4 justify-center py-8">
+        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full active">1</li>
+        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">2</li>
+        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">3</li>
+        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">4</li>
       </ol>
     </nav>
   </header>
   <main>
     <section id="1">
-      <form action="" class="bg-white w-85 m-auto px-4 py-6 rounded-sm">
-        <h1 class="text-(--primary-color) font-bold text-lg">Personal info</h1>
-        <p class="mt-2 mb-4">Please provide your name, email address, and phone number.</p>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="e.g. Stephen King"><br>
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com"><br>
-        <label for="phone-number">Phone Number</label>
-        <input type="tel" name="phone-number" id="phone-number" placeholder="e.g. +1 234 567 890"><br>
+      <form class="bg-white w-85 m-auto px-4 py-6 rounded-sm shadow-md">
+        <h1 class="text-(--primary-color) font-bold text-2xl">Personal info</h1>
+        <p class="mt-2 mb-4 text-(--secondary-text)">Please provide your name, email address, and phone number.</p>
+        <label class="text-(--primary-color) block text-sm" for="name">Name</label>
+        <input
+          class="border border-(--secondary-text) font-normal rounded-sm px-3 py-2 mt-1 mb-2 w-full outline-none active:border-(--primary-color) focus:border-(--primary-color)"
+          type="text" name="name" id="name" placeholder="e.g. Stephen King"><br>
+        <label class="text-(--primary-color) block text-sm" for="email">Email Address</label>
+        <input
+          class="border border-(--secondary-text) font-normal rounded-sm px-3 py-2 mt-1 mb-2 w-full outline-none active:border-(--primary-color) focus:border-(--primary-color)"
+          type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com"><br>
+        <label class="text-(--primary-color) block text-sm" for="phone-number">Phone Number</label>
+        <input
+          class="border border-(--secondary-text) font-normal rounded-sm px-3 py-2 mt-1 mb-2 w-full outline-none active:border-(--primary-color) focus:border-(--primary-color)"
+          type="tel" name="phone-number" id="phone-number" placeholder="e.g. +1 234 567 890"><br>
       </form>
-      <button type="submit" class="bg-(--primary-color) text-white rounded-sm px-3 py-2">Next Step</button>
+      <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse">
+        <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2" type="submit">Next Step</button>
+      </section>
     </section>
     <section id="2" class="hidden">
       <form action="">
@@ -92,7 +100,7 @@
       <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support,
         please feel free to email us at support@loremgaming.com.</p>
     </section>
-  </main>  
+  </main>
 </body>
 
 </html>
