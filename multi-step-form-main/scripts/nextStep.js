@@ -1,5 +1,7 @@
 const buttons = document.getElementsByClassName("next-step");
 
+const steps = document.getElementsByTagName("li");
+
 for (let button of buttons) {
   button.addEventListener("click", function (e) {
     const buttonSection = e.target.closest("section");
@@ -13,6 +15,8 @@ for (let button of buttons) {
             const targetSection = document.getElementById(nextStep);
             targetSection.classList.remove("hidden");
             document.getElementById(formId).classList.add("hidden");
+            steps[formId - 1].classList.remove("active");
+            steps[nextStep - 1].classList.add("active");
           }
         }
       }

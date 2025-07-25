@@ -1,5 +1,6 @@
 :root {
   --primary-color: hsl(213, 96%, 18%);
+  --secondary-color: hsl(218, 100%, 97%);
   --primary-text: hsl(243, 100%, 62%);
   --secondary-text: hsl(231, 11%, 63%);
 }
@@ -16,4 +17,53 @@ body {
   background-color: hsl(206, 94%, 87%);
   border-color: hsl(206, 94%, 87%);
   color: hsl(213, 96%, 18%);
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 2.25em;
+  height: 1em;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transition: 0.4s;
+  border-radius: 2em;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: .75em;
+  width: .75em;
+  left: .125em;
+  bottom: .125em;
+  background-color: #FFF;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.25em);
 }

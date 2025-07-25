@@ -27,17 +27,17 @@
 
   <header>
     <nav>
-      <ol class="list-none flex gap-4 justify-center py-8">
-        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full active">1</li>
-        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">2</li>
-        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">3</li>
-        <li class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">4</li>
+      <ol class="list-none w-full flex gap-4 justify-center py-8">
+        <li id="1" class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">1</li>
+        <li id="2" class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">2</li>
+        <li id="3" class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">3</li>
+        <li id="4" class="w-8 h-8 p-1 text-sm text-white text-center border border-white rounded-full">4</li>
       </ol>
     </nav>
   </header>
   <main>
-    <section id="1">
-      <form class="bg-white w-85 m-auto px-4 py-6 rounded-sm shadow-md">
+    <section id="1" class="hidden form">
+      <form class="bg-white w-[90%] m-auto px-4 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Personal info</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">Please provide your name, email address, and phone number.</p>
         <label class="text-(--primary-color) block text-sm" for="name">Name</label>
@@ -57,23 +57,64 @@
         <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2 next-step" type="submit">Next Step</button>
       </section>
     </section>
-    <section id="2" class="hidden">
-      <form action="">
-        <h1>Select your plan</h1>
-        <p>You have the option of monthly or yearly billing.</p>
-        <input type="radio" name="plan" id="arcade" value="Arcade">
-        <label for="arcade">Arcade</label><br>
-        <input type="radio" name="plan" id="advanced" value="Advanced">
-        <label for="arcade">Advanced</label><br>
-        <input type="radio" name="plan" id="pro" value="Pro">
-        <label for="arcade">Pro</label><br>
-        <input type="checkbox" name="plan" id="plan">
-        <label for="plan">Monthly / Yearly</label><br>
-        <button>Go Back</button>
-        <button type="submit">Next Step</button>
+    <section id="2" class="form">
+      <form class="bg-white w-[90%] m-auto px-4 py-6 rounded-sm shadow-md">
+        <h1 class="text-(--primary-color) font-bold text-2xl">Select your plan</h1>
+        <p class="mt-2 mb-4 text-(--secondary-text)">You have the option of monthly or yearly billing.</p>
+        <input class="hidden" type="radio" name="plan" id="arcade" value="Arcade">
+        <label
+          class="flex items-center gap-3 border border-(--secondary-text) p-3 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-color)"
+          for="arcade">
+          <figure>
+            <img src="./assets/images/icon-arcade.svg" alt="arcade-svg">
+          </figure>
+          <section>
+            <h2 class="text-(--primary-color) font-bold">Arcade</h2>
+            <p class="text-(--secondary-text) text-xs"><span class="monthly-price">$9/mo</span> <span
+                class="yearly-price hidden">$90/yr</span></p>
+          </section>
+        </label><br>
+        <input class="hidden" type="radio" name="plan" id="advanced" value="Advanced">
+        <label
+          class="flex items-center gap-3 border border-(--secondary-text) p-3 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-color)"
+          for="advanced">
+          <figure>
+            <img src="./assets/images/icon-advanced.svg" alt="advanced-svg">
+          </figure>
+          <section>
+            <h2 class="text-(--primary-color) font-bold">Advanced</h2>
+            <p class="text-(--secondary-text) text-xs"><span class="monthly-price">$12/mo</span> <span
+                class="yearly-price hidden">$120/yr</span></p>
+          </section>
+        </label><br>
+        <input class="hidden" type="radio" name="plan" id="pro" value="Pro">
+        <label
+          class="flex items-center gap-3 border border-(--secondary-text) p-3 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-color)"
+          for="pro">
+          <figure>
+            <img src="./assets/images/icon-pro.svg" alt="advanced-svg">
+          </figure>
+          <section>
+            <h2 class="text-(--primary-color) font-bold">Pro</h2>
+            <p class="text-(--secondary-text) text-xs"><span class="monthly-price">$15/mo</span> <span
+                class="yearly-price hidden">$150/yr</span></p>
+          </section>
+        </label><br>
+        <section class="flex justify-center items-center gap-2">
+          <span id="monthly-subscription" class="text-(--primary-color) font-medium">Monthly</span>
+          <label class="toggle">
+            <input type="checkbox" id="btnToggle" name="btnToggle" />
+            <span class="slider"></span>
+          </label>
+          <span id="yearly-subscription" class="text-(--secondary-text)">Yearly</span>
+        </section>
       </form>
+      <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse justify-between">
+        <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2 next-step" type="submit">Next Step</button>
+        <button class="text-(--secondary-text) hover:text-(--primary-color)">Go Back</button>
+      </section>
     </section>
-    <section id="3" class="hidden">
+    <section id="3" class="hidden form">
       <form action="">
         <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaming experience.</p>
@@ -87,7 +128,7 @@
         <button type="submit">Next Step</button>
       </form>
     </section>
-    <section id="4" class="hidden">
+    <section id="4" class="hidden form">
       <h1>Finishing up</h1>
       <p>Double-check everything looks OK before confirming.</p>
       <p>Plan name</p>
@@ -101,7 +142,9 @@
         please feel free to email us at support@loremgaming.com.</p>
     </section>
   </main>
-  <script type="module" src="./scripts/steps.js"></script>
+  <script type="module" src="./scripts/currentStep.js"></script>
+  <script type="module" src="./scripts/toggle.js"></script>
+  <script type="module" src="./scripts/nextStep.js"></script>
 </body>
 
 </html>
