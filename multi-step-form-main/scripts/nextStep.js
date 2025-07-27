@@ -9,6 +9,7 @@ for (let button of buttons) {
       const formSection = buttonSection.parentElement;
       if (formSection) {
         const formId = formSection.id;
+        console.log(formId);
         if (formId) {
           const nextStep = parseInt(formId) + 1;
           if (formId >= 1) {

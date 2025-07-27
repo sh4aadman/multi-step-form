@@ -3,6 +3,8 @@
   --secondary-color: hsl(218, 100%, 97%);
   --primary-text: hsl(243, 100%, 62%);
   --secondary-text: hsl(231, 11%, 63%);
+  --primary-border: hsl(240, 100%, 50%);
+  --primary-background: hsl(248, 53%, 58%);
 }
 
 html {
@@ -22,7 +24,7 @@ body {
 input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none; 
+  -moz-appearance: none;
 }
 
 .toggle {
@@ -51,19 +53,23 @@ input[type="radio"] {
 .slider:before {
   position: absolute;
   content: "";
-  height: .75em;
-  width: .75em;
-  left: .125em;
-  bottom: .125em;
-  background-color: #FFF;
+  height: 0.75em;
+  width: 0.75em;
+  left: 0.125em;
+  bottom: 0.125em;
+  background-color: #fff;
   transition: 0.4s;
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input#btnToggle:checked + .slider {
   background-color: var(--primary-color);
 }
 
-input:checked + .slider:before {
+input#btnToggle:checked + .slider:before {
   transform: translateX(1.25em);
+}
+
+input.add-ons:checked {
+  background-color: var(--primary-border);
 }
