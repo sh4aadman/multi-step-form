@@ -37,7 +37,7 @@
   </header>
   <main>
     <section id="1" class="form">
-      <form class="bg-white w-[90%] m-auto px-4 py-6 rounded-sm shadow-md">
+      <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Personal info</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">Please provide your name, email address, and phone number.</p>
         <label class="text-(--primary-color) block text-sm" for="name">Name</label>
@@ -59,7 +59,7 @@
       </section>
     </section>
     <section id="2" class="hidden form">
-      <form class="bg-white w-[90%] m-auto px-4 py-6 rounded-sm shadow-md">
+      <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Select your plan</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">You have the option of monthly or yearly billing.</p>
         <input class="hidden" type="radio" name="plan" id="arcade" value="Arcade">
@@ -113,11 +113,11 @@
       <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse justify-between">
         <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2 hover:bg-(--primary-background) next-step"
           type="submit">Next Step</button>
-        <button class="text-(--secondary-text) hover:text-(--primary-color)">Go Back</button>
+        <button class="text-(--secondary-text) hover:text-(--primary-color) previous-step">Go Back</button>
       </section>
     </section>
     <section id="3" class="hidden form">
-      <form class="bg-white w-[90%] m-auto px-4 py-6 rounded-sm shadow-md">
+      <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Pick add-ons</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">Add-ons help enhance your gaming experience.</p>
         <section
@@ -160,11 +160,11 @@
       <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse justify-between">
         <button class="bg-(--primary-color) text-white rounded-sm px-3 py-2 hover:bg-(--primary-background) next-step"
           type="submit">Next Step</button>
-        <button class="text-(--secondary-text) hover:text-(--primary-color)">Go Back</button>
+        <button class="text-(--secondary-text) hover:text-(--primary-color) previous-step">Go Back</button>
       </section>
     </section>
     <section id="4" class="hidden form">
-      <section class="bg-white w-[90%] m-auto px-4 py-6 rounded-sm shadow-md">
+      <section class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Finishing up</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">Double-check everything looks OK before confirming.</p>
         <section class="bg-(--secondary-color) p-4 rounded-sm" id="memo">
@@ -187,10 +187,10 @@
       <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse justify-between">
         <button class="bg-(--primary-text) text-white rounded-sm px-3 py-2 hover:bg-(--primary-background) next-step"
           type="submit">Confirm</button>
-        <button class="text-(--secondary-text) hover:text-(--primary-color)">Go Back</button>
+        <button class="text-(--secondary-text) hover:text-(--primary-color) previous-step">Go Back</button>
       </section>
     </section>
-    <section id="5" class="hidden bg-white w-[90%] m-auto px-5 py-12 rounded-sm shadow-md text-center">
+    <section id="5" class="hidden bg-white w-[90%] m-auto px-6 py-12 rounded-sm shadow-md text-center">
       <figure class="flex justify-center mb-6">
         <img class="w-12 h-12" src="./assets/images/icon-thank-you.svg" alt="order-confirmed-svg">
       </figure>
@@ -199,9 +199,10 @@
         please feel free to email us at support@loremgaming.com.</p>
     </section>
   </main>
-  <script type="module" src="./scripts/navigation.js"></script>
-  <script type="module" src="./scripts/currentStep.js"></script>
+  <script type="module" src="./scripts/utils.js"></script>
+  <script type="module" src="./scripts/currentForm.js"></script>
   <script type="module" src="./scripts/toggle.js"></script>
+  <script type="module" src="./scripts/goBack.js"></script>
   <script type="module" src="./scripts/nextStep.js"></script>
 </body>
 
