@@ -58,65 +58,61 @@
           type="submit">Next Step</button>
       </section>
     </section>
-    <section id="2" class="form">
+    <section id="2" class="hidden form">
       <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Select your plan</h1>
-        <p class="mt-2 mb-4 text-(--secondary-text)">You have the option of monthly or yearly billing.</p>
-        <section
-          class="flex border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-4">
-          <label for="arcade">
-            <input class="peer flex" type="radio" name="plan" id="arcade" value="Arcade">
-            <section class="flex items-center gap-3 w-full peer-checked:border">
-              <figure>
-                <img src="./assets/images/icon-arcade.svg" alt="arcade-svg">
-              </figure>
-              <section>
-                <h2 class="text-(--primary-color) font-bold tracking-tight">Arcade</h2>
-                <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$9/mo</span> <span
-                    class="yearly-price hidden">$90/yr</span></p>
-              </section>
+        <p class="mt-2 mb-2 text-(--secondary-text)">You have the option of monthly or yearly billing.</p>
+        <label class="cursor-pointer" for="arcade">
+          <input class="peer" type="radio" name="plan" id="arcade" value="Arcade">
+          <section
+            class="flex items-center gap-3 w-full peer-checked:border-(--primary-border) peer-checked:bg-(--secondary-color) border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border)">
+            <figure>
+              <img src="./assets/images/icon-arcade.svg" alt="arcade-svg">
+            </figure>
+            <section>
+              <h2 class="text-(--primary-color) font-bold tracking-tight">Arcade</h2>
+              <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$9/mo</span> <span
+                  class="yearly-price hidden">$90/yr</span></p>
             </section>
-          </label>
-        </section>
-        <section
-          class="flex border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-4">
-          <label for="advanced">
-            <input class="peer flex" type="radio" name="plan" id="advanced" value="Advanced">
-            <section class="flex items-center gap-3 w-full peer-checked:border">
-              <figure>
-                <img src="./assets/images/icon-advanced.svg" alt="advanced-svg">
-              </figure>
-              <section>
-                <h2 class="text-(--primary-color) font-bold tracking-tight">Advanced</h2>
-                <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$12/mo</span>
-                  <span class="yearly-price hidden">$120/yr</span></p>
-              </section>
+          </section>
+        </label>
+        <label class="cursor-pointer" for="advanced">
+          <input class="peer" type="radio" name="plan" id="advanced" value="Advanced">
+          <section
+            class="flex items-center gap-3 w-full peer-checked:border-(--primary-border) peer-checked:bg-(--secondary-color) border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border)">
+            <figure>
+              <img src="./assets/images/icon-advanced.svg" alt="advanced-svg">
+            </figure>
+            <section>
+              <h2 class="text-(--primary-color) font-bold tracking-tight">Advanced</h2>
+              <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$12/mo</span>
+                <span class="yearly-price hidden">$120/yr</span>
+              </p>
             </section>
-          </label>
-        </section>
-        <section
-          class="flex border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-5">
-          <label for="pro">
-            <input class="peer flex" type="radio" name="plan" id="pro" value="Pro">
-            <section class="flex items-center gap-3 w-full peer-checked:border">
-              <figure>
-                <img src="./assets/images/icon-pro.svg" alt="pro-svg">
-              </figure>
-              <section>
-                <h2 class="text-(--primary-color) font-bold tracking-tight">Pro</h2>
-                <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$15/mo</span>
-                  <span class="yearly-price hidden">$150/yr</span></p>
-              </section>
+          </section>
+        </label>
+        <label class="cursor-pointer" for="pro">
+          <input class="peer" type="radio" name="plan" id="pro" value="Pro">
+          <section
+            class="flex items-center gap-3 w-full peer-checked:border-(--primary-border) peer-checked:bg-(--secondary-color) border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-6">
+            <figure>
+              <img src="./assets/images/icon-pro.svg" alt="pro-svg">
+            </figure>
+            <section>
+              <h2 class="text-(--primary-color) font-bold tracking-tight">Pro</h2>
+              <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$15/mo</span>
+                <span class="yearly-price hidden">$150/yr</span>
+              </p>
             </section>
-          </label>
-        </section>
-        <section class="flex justify-center items-center gap-2">
-          <span id="monthly-subscription" class="text-(--primary-color) font-medium">Monthly</span>
+          </section>
+        </label>
+        <section class="flex justify-center items-center gap-2 bg-(--slider-background) p-3 rounded-sm">
+          <span id="monthly-subscription" class="text-(--primary-color) font-medium tracking-tight">Monthly</span>
           <label class="toggle">
             <input type="checkbox" id="btnToggle" name="btnToggle" />
             <span class="slider"></span>
           </label>
-          <span id="yearly-subscription" class="text-(--secondary-text)">Yearly</span>
+          <span id="yearly-subscription" class="text-(--secondary-text) tracking-tight">Yearly</span>
         </section>
       </form>
       <section class="bg-white fixed bottom-0 p-4 w-full flex flex-row-reverse justify-between">
@@ -125,7 +121,7 @@
         <button class="text-(--secondary-text) hover:text-(--primary-color) previous-step">Go Back</button>
       </section>
     </section>
-    <section id="3" class="hidden form">
+    <section id="3" class="form">
       <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Pick add-ons</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">Add-ons help enhance your gaming experience.</p>

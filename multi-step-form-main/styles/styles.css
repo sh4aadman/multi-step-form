@@ -5,6 +5,7 @@
   --secondary-text: hsl(231, 11%, 63%);
   --primary-border: hsl(240, 100%, 50%);
   --primary-background: hsl(248, 53%, 58%);
+  --slider-background: hsl(218, 100%, 97%);
 }
 
 html {
