@@ -36,7 +36,7 @@
     </nav>
   </header>
   <main>
-    <section id="1" class="form">
+    <section id="1" class="hidden form">
       <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Personal info</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">Please provide your name, email address, and phone number.</p>
@@ -58,49 +58,58 @@
           type="submit">Next Step</button>
       </section>
     </section>
-    <section id="2" class="hidden form">
+    <section id="2" class="form">
       <form class="bg-white w-[90%] m-auto px-6 py-6 rounded-sm shadow-md">
         <h1 class="text-(--primary-color) font-bold text-2xl">Select your plan</h1>
         <p class="mt-2 mb-4 text-(--secondary-text)">You have the option of monthly or yearly billing.</p>
-        <input class="hidden" type="radio" name="plan" id="arcade" value="Arcade">
-        <label
-          class="flex items-center gap-3 border border-(--secondary-text) p-3 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border)"
-          for="arcade">
-          <figure>
-            <img src="./assets/images/icon-arcade.svg" alt="arcade-svg">
-          </figure>
-          <section>
-            <h2 class="text-(--primary-color) font-bold">Arcade</h2>
-            <p class="text-(--secondary-text) text-xs"><span class="monthly-price">$9/mo</span> <span
-                class="yearly-price hidden">$90/yr</span></p>
-          </section>
-        </label><br>
-        <input class="hidden" type="radio" name="plan" id="advanced" value="Advanced">
-        <label
-          class="flex items-center gap-3 border border-(--secondary-text) p-3 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border)"
-          for="advanced">
-          <figure>
-            <img src="./assets/images/icon-advanced.svg" alt="advanced-svg">
-          </figure>
-          <section>
-            <h2 class="text-(--primary-color) font-bold">Advanced</h2>
-            <p class="text-(--secondary-text) text-xs"><span class="monthly-price">$12/mo</span> <span
-                class="yearly-price hidden">$120/yr</span></p>
-          </section>
-        </label><br>
-        <input class="hidden" type="radio" name="plan" id="pro" value="Pro">
-        <label
-          class="flex items-center gap-3 border border-(--secondary-text) p-3 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border)"
-          for="pro">
-          <figure>
-            <img src="./assets/images/icon-pro.svg" alt="pro-svg">
-          </figure>
-          <section>
-            <h2 class="text-(--primary-color) font-bold">Pro</h2>
-            <p class="text-(--secondary-text) text-xs"><span class="monthly-price">$15/mo</span> <span
-                class="yearly-price hidden">$150/yr</span></p>
-          </section>
-        </label><br>
+        <section
+          class="flex border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-4">
+          <label for="arcade">
+            <input class="peer flex" type="radio" name="plan" id="arcade" value="Arcade">
+            <section class="flex items-center gap-3 w-full peer-checked:border">
+              <figure>
+                <img src="./assets/images/icon-arcade.svg" alt="arcade-svg">
+              </figure>
+              <section>
+                <h2 class="text-(--primary-color) font-bold tracking-tight">Arcade</h2>
+                <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$9/mo</span> <span
+                    class="yearly-price hidden">$90/yr</span></p>
+              </section>
+            </section>
+          </label>
+        </section>
+        <section
+          class="flex border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-4">
+          <label for="advanced">
+            <input class="peer flex" type="radio" name="plan" id="advanced" value="Advanced">
+            <section class="flex items-center gap-3 w-full peer-checked:border">
+              <figure>
+                <img src="./assets/images/icon-advanced.svg" alt="advanced-svg">
+              </figure>
+              <section>
+                <h2 class="text-(--primary-color) font-bold tracking-tight">Advanced</h2>
+                <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$12/mo</span>
+                  <span class="yearly-price hidden">$120/yr</span></p>
+              </section>
+            </section>
+          </label>
+        </section>
+        <section
+          class="flex border border-(--secondary-text) p-4 rounded-sm hover:bg-(--secondary-color) hover:border-(--primary-border) mb-5">
+          <label for="pro">
+            <input class="peer flex" type="radio" name="plan" id="pro" value="Pro">
+            <section class="flex items-center gap-3 w-full peer-checked:border">
+              <figure>
+                <img src="./assets/images/icon-pro.svg" alt="pro-svg">
+              </figure>
+              <section>
+                <h2 class="text-(--primary-color) font-bold tracking-tight">Pro</h2>
+                <p class="text-(--secondary-text) text-xs tracking-tight"><span class="monthly-price">$15/mo</span>
+                  <span class="yearly-price hidden">$150/yr</span></p>
+              </section>
+            </section>
+          </label>
+        </section>
         <section class="flex justify-center items-center gap-2">
           <span id="monthly-subscription" class="text-(--primary-color) font-medium">Monthly</span>
           <label class="toggle">
@@ -203,6 +212,7 @@
   <script type="module" src="./scripts/utils.js"></script>
   <script type="module" src="./scripts/observer.js"></script>
   <script type="module" src="./scripts/currentForm.js"></script>
+  <script type="module" src="./scripts/inputs.js"></script>
   <script type="module" src="./scripts/toggle.js"></script>
   <script type="module" src="./scripts/goBack.js"></script>
   <script type="module" src="./scripts/nextStep.js"></script>
